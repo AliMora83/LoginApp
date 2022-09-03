@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text } from "react-native";
+// import { View, Text } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import LoginScreen from "./screens/Login";
@@ -7,6 +7,7 @@ import HomeScreen from "./screens/Home";
 import SignUpScreen from "./screens/SignUp";
 import firebase from "firebase/app";
 import "firebase/auth";
+import { getAnalytics } from "firebase/analytics";
 
 const Stack = createNativeStackNavigator();
 
@@ -29,6 +30,7 @@ function App() {
   };
 
   // const app = initializeApp(firebaseConfig);
+  // const analytics = getAnalytics(app);
 
   //Checking if firebase has been initialized
   if (!firebase.apps.length) {
